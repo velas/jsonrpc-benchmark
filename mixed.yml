@@ -1,0 +1,15 @@
+---
+
+concurrency: 500
+base: '{{ URL }}'
+iterations: 1000
+rampup: 5
+
+plan:
+  - name: Mixed sleep
+    request:
+      url: /
+      method: POST
+      body: '{"jsonrpc": "2.0", "id": 1, "method": "mixedSleep", "params": []}'
+      headers:
+        Content-Type: 'application/json'

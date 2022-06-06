@@ -1,0 +1,15 @@
+---
+
+concurrency: 20
+base: '{{ URL }}'
+iterations: 20
+rampup: 5
+
+plan:
+  - name: Native
+    request:
+      url: /
+      method: POST
+      body: '{"jsonrpc": "2.0", "id": 1, "method": "nativeSleep", "params": []}'
+      headers:
+        Content-Type: 'application/json'
