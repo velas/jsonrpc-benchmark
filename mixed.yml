@@ -1,7 +1,7 @@
 ---
 
-concurrency: 500
-base: '{{ URL }}'
+concurrency: 1000
+base: 'http://localhost:3030'
 iterations: 1000
 rampup: 5
 

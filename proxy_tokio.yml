@@ -1,15 +1,15 @@
 ---
 
 concurrency: 1000
-base: 'http://localhost:3030'
+base: 'http://localhost:3031'
 iterations: 1000
 rampup: 5
 
 plan:
-  - name: Tokio
+  - name: Proxy Tokio
     request:
       url: /
       method: POST
-      body: '{"jsonrpc": "2.0", "id": 1, "method": "tokioSleep", "params": []}'
+      body: '{"jsonrpc": "2.0", "id": 1, "method": "proxy_tokioSleep", "params": []}'
       headers:
         Content-Type: 'application/json'
